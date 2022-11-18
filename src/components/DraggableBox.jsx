@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Draggable from "react-draggable";
-import { DragIconFilled } from '../constant'
+import { DragIconFilled, CHILD_DIV_RECT } from '../constant'
 
 const DraggableBox = ({modelPosition, setModelPosition, children }) => {
   const innerDiv = useRef();
@@ -8,6 +8,10 @@ const DraggableBox = ({modelPosition, setModelPosition, children }) => {
     const { x, y } = data;
     setModelPosition({ x, y });
   };
+
+  useEffect(() => {
+    sessionStorage.setItem(CHILD_DIV_RECT, JSON.stringify(innerDiv.current.getBoundingClientRect()));
+  }, [])
 
   return (
     <Draggable

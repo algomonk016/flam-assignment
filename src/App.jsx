@@ -11,8 +11,15 @@ const App = () => {
 
   return (
     <div className="h-screen">
-      <Header modelPosition={modelPosition} setModelPosition={updateModelPosition} />
-      <DisplayModel modelPosition={modelPosition} setModelPosition={updateModelPosition}  />
+      <Header 
+        setModelPosition={updateModelPosition} 
+      />
+      
+      <DisplayModel
+        modelPosition={modelPosition} 
+        setModelPosition={updateModelPosition}
+      />
+      
       <Footer />
     </div>
   )
