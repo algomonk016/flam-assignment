@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Draggable from "react-draggable";
-// import { DragIcon } from '../constant'
+import { DragIconFilled } from '../constant'
 
 const DraggableBox = ({ children }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -17,10 +17,10 @@ const DraggableBox = ({ children }) => {
       handle="#handle"
       position={position}
     >
-      <div className="w-fit flex items-center" ref={innerDiv}>
+      <div className="w-fit flex items-start" ref={innerDiv}>
         {children}
         <span id="handle" className="cursor-pointer p-1"> 
-          Drag
+          <img src={DragIconFilled} className="w-8 h-8" style={{ pointerEvents: 'none' }}  />
         </span>
       </div>
     </Draggable>

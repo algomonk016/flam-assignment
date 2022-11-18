@@ -1,5 +1,7 @@
-const DragIcon = require('../assets/icons/hand-cursor.png');
+const DragIcon = require('../assets/icons/drag.png');
+const DragIconFilled = require('../assets/icons/dragFilled.png');
 
 export {
-  DragIcon
+  DragIcon,
+  DragIconFilled
 }

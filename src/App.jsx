@@ -3,7 +3,7 @@ import { DisplayModel, DraggableBox, Footer, Header } from "./components";
 
 const App = () => {
   return (
-    <div className="h-screen grid grid-rows-7 gap-1 place-start">
+    <div className="h-screen">
       <Header />
       <DisplayModel />
       <Footer />

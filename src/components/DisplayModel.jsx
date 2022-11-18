@@ -18,7 +18,6 @@ const Model = () => {
 
 const DisplayModel = () => {
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -29,7 +28,13 @@ const DisplayModel = () => {
   }, []);
 
   return (
-    <div className='container mx-auto border-2 border-red-400 bg-blue-500 rounded-lg' style={{ height: windowDimensions.height * 0.80 }} >
+    <div
+      className='container mx-auto border-2 border-red-400 rounded-lg absolute'
+      style={{
+        height: windowDimensions.height * 0.75,
+        top: windowDimensions.height - windowDimensions.height * 0.89,
+        left: windowDimensions.width - windowDimensions.width * 0.95
+      }} >
       {
         <DraggableBox>
           <div className='h-64 bg-red-200 w-fit' >
