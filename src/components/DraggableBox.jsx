@@ -1,13 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import Draggable from "react-draggable";
 import { DragIconFilled } from '../constant'
 
-const DraggableBox = ({ children }) => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+const DraggableBox = ({modelPosition, setModelPosition, children }) => {
   const innerDiv = useRef();
   const trackPos = (data) => {
     const { x, y } = data;
-    setPosition({ x, y });
+    setModelPosition({ x, y });
   };
 
   return (
@@ -15,7 +14,7 @@ const DraggableBox = ({ children }) => {
       onDrag={(e, data) => trackPos(data)} 
       bounds="parent"
       handle="#handle"
-      position={position}
+      position={modelPosition}
     >
       <div className="w-fit flex items-start relative" ref={innerDiv}>
         {children}
