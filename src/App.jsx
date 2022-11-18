@@ -1,5 +1,5 @@
 import React from "react";
-import { DisplayModel, Footer, Header } from "./components";
+import { DisplayModel, DraggableBox, Footer, Header } from "./components";
 
 const App = () => {
   return (
