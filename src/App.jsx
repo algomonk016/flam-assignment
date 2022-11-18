@@ -1,10 +1,12 @@
 import React from "react";
-import { DisplayModel } from "./components";
+import { DisplayModel, Footer, Header } from "./components";
 
 const App = () => {
   return (
-    <div>
+    <div className="h-screen grid grid-rows-7 gap-1 place-start">
+      <Header />
       <DisplayModel />
+      <Footer />
     </div>
   )
 }
