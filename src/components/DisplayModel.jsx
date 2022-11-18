@@ -37,8 +37,8 @@ const DisplayModel = () => {
       }} >
       {
         <DraggableBox>
-          <div className='h-64 bg-red-200 w-fit' >
-            <Canvas camera={{ position: [30, 0, 40], fov: 3 }}>
+          <div className='h-64 bg-gray-100 rounded-lg w-fit' >
+            <Canvas camera={{ position: [30, 0, 30], fov: 3 }}>
               <OrbitControls />
               <mesh position={[0, -1, 0]}>
                 <ambientLight intensity={1} />

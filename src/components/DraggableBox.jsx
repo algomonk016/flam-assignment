@@ -17,9 +17,9 @@ const DraggableBox = ({ children }) => {
       handle="#handle"
       position={position}
     >
-      <div className="w-fit flex items-start" ref={innerDiv}>
+      <div className="w-fit flex items-start relative" ref={innerDiv}>
         {children}
-        <span id="handle" className="cursor-pointer p-1"> 
+        <span id="handle" className="cursor-pointer p-1 absolute right-0"> 
           <img src={DragIconFilled} className="w-8 h-8" style={{ pointerEvents: 'none' }}  />
         </span>
       </div>
