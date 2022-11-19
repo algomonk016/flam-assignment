@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/flam-assignment/static/css/main.6063c591.css",
+    "main.js": "/flam-assignment/static/js/main.1686f07b.js",
+    "static/js/787.88e5d002.chunk.js": "/flam-assignment/static/js/787.88e5d002.chunk.js",
+    "static/media/github.png": "/flam-assignment/static/media/github.237e2214562c441f67b2.png",
+    "index.html": "/flam-assignment/index.html",
+    "main.6063c591.css.map": "/flam-assignment/static/css/main.6063c591.css.map",
+    "main.1686f07b.js.map": "/flam-assignment/static/js/main.1686f07b.js.map",
+    "787.88e5d002.chunk.js.map": "/flam-assignment/static/js/787.88e5d002.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6063c591.css",
+    "static/js/main.1686f07b.js"
+  ]
+}
