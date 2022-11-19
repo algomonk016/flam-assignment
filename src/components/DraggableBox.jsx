@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Draggable from "react-draggable";
-import { DragIconFilled, CHILD_DIV_RECT } from '../constant'
+import { DragIconFilled, CHILD_DIV_RECT, COUNT } from '../constant'
 
 const DraggableBox = ({modelPosition, setModelPosition, children }) => {
   const innerDiv = useRef();
@@ -11,6 +11,17 @@ const DraggableBox = ({modelPosition, setModelPosition, children }) => {
 
   useEffect(() => {
     sessionStorage.setItem(CHILD_DIV_RECT, JSON.stringify(innerDiv.current.getBoundingClientRect()));
+    if(!sessionStorage.getItem(COUNT)){
+      sessionStorage.setItem(COUNT, 1);
+      window.location.reload(true);
+    } else{
+      const count = Number(sessionStorage.getItem(COUNT));
+      
+      if(count < 2){
+        window.location.reload(true); 
+        sessionStorage.setItem(COUNT, count+1);
+      }
+    }
   }, [])
 
   return (
