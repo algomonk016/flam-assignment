@@ -5,7 +5,7 @@ import DraggableBox from './DraggableBox';
 import { dark, PARENT_DIV_RECT } from '../constant'
 import { getWindowDimensions } from '../utils/helper'
 
-const Model = () => {
+export const Model = () => {
   const { scene } = useGLTF("person3dmodel.glb")
   return <primitive object={scene} scale={1} />;
 }
@@ -28,6 +28,10 @@ const DisplayModel = (props) => {
     sessionStorage.setItem(PARENT_DIV_RECT, JSON.stringify(outerDivRef.current.getBoundingClientRect()));
   }, [])
 
+  const openInFullView = () => {
+    window.open(window.location.href + '/model')
+  }
+
   return (
     <div
       ref = {outerDivRef}
@@ -40,7 +44,7 @@ const DisplayModel = (props) => {
       className='container mx-auto border-2 rounded-lg absolute'
     >
       <DraggableBox modelPosition = {modelPosition} setModelPosition = {setModelPosition} >
-        <div className='h-64 bg-gray-100 rounded-lg' style={{ width: '300px' }} >
+        <div onDoubleClick={openInFullView} className='h-64 bg-gray-100 rounded-lg' style={{ width: '300px' }} >
           <Canvas camera={{ position: [30, 0, 30], fov: 3 }}>
             <OrbitControls />
             <mesh position={[0, -1, 0]}>

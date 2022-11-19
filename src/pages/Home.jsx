@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { DisplayModel, Footer, Header } from "../components";
+import { COORDS } from "../constant";
 
 const Home = () => {
 
-  const [modelPosition, setModelPosition] = useState({ x: 0, y: 0 });
+  const [modelPosition, setModelPosition] = useState( !!localStorage.getItem(COORDS) ? JSON.parse(localStorage.getItem(COORDS)) : {x: 0, y: 0} );
 
   const updateModelPosition = (newPosition) => {
     setModelPosition(newPosition);
   }
+
+  useEffect(() => {
+    localStorage.setItem(COORDS, JSON.stringify(modelPosition));
+    console.log('here')
+  }, [modelPosition])
 
   return (
     <div className="h-screen">
