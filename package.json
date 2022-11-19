@@ -1,6 +1,7 @@
 {
   "name": "flam-assignment",
   "version": "0.1.0",
+  "homepage": "https://algomonk016.github.io/flam-assignment",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.40.4",
@@ -20,6 +21,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

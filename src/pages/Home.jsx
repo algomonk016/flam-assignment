@@ -13,7 +13,6 @@ const Home = () => {
 
   useEffect(() => {
     localStorage.setItem(COORDS, JSON.stringify(modelPosition));
-    console.log('here')
   }, [modelPosition])
 
   return (

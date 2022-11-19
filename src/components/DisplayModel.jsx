@@ -29,6 +29,7 @@ const DisplayModel = (props) => {
   }, [])
 
   const openInFullView = () => {
+    alert('My apologies, it is not working')
     window.open(window.location.href + '/model')
   }
 
